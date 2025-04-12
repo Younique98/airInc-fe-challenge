@@ -1,5 +1,24 @@
 import Image from "next/image";
 
+
+/**
+ * ImageWithPlaceholder
+ * 
+ * A wrapper around Next.js <Image /> that provides:
+ * - blur placeholder using blurDataURL
+ * - responsive image sizing
+ * - optional priority loading for above-the-fold content
+ * 
+ * Props:
+ * @param src - the image URL
+ * @param alt - the alt text for accessibility
+ * @param width - optional width (default 600)
+ * @param height - optional height (default 400)
+ * @param className - optional styling override
+ * @param priority - whether to preload image
+ * @param sizes - responsive sizing config
+ */
+
 interface IImageWithPlaceholderProps {
     src: string;
     alt: string;
