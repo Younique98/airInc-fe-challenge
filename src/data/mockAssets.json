@@ -2,7 +2,7 @@
     {
         "id": "1",
         "title": "Brand Guidelines",
-        "thumbnail": "https://picsum.photos/seed/brand-guidelines/600/400",
+        "thumbnail": "https://picsum.photos/seed/brand-guidelines/480/320",
         "boardName": "Marketing",
         "description": "Assets related to branding, tone, and design standards.",
         "createdAt": "2024-12-01T10:00:00Z"
@@ -10,7 +10,7 @@
     {
         "id": "2",
         "title": "Team Introductions",
-        "thumbnail": "https://picsum.photos/seed/team-intros/600/400",
+        "thumbnail": "https://picsum.photos/seed/team-intros/480/320",
         "boardName": "People Ops",
         "description": "Meet our internal team with headshots and short bios.",
         "createdAt": "2024-12-02T12:00:00Z"
@@ -18,7 +18,7 @@
     {
         "id": "3",
         "title": "Product Concepts",
-        "thumbnail": "https://picsum.photos/seed/product-preview/600/400",
+        "thumbnail": "https://picsum.photos/seed/product-preview/480/320",
         "boardName": "Product",
         "description": "Early previews of product features and user flows.",
         "createdAt": "2024-12-03T14:00:00Z"
@@ -26,7 +26,7 @@
     {
         "id": "4",
         "title": "Event Footage",
-        "thumbnail": "https://picsum.photos/seed/fall-gala/600/400",
+        "thumbnail": "https://picsum.photos/seed/fall-gala/480/320",
         "boardName": "Events",
         "description": "Photos and clips from our latest in-person meetups.",
         "createdAt": "2024-12-04T16:00:00Z"
@@ -34,7 +34,7 @@
     {
         "id": "5",
         "title": "Packaging Drafts",
-        "thumbnail": "https://picsum.photos/seed/packaging/600/400",
+        "thumbnail": "https://picsum.photos/seed/packaging/480/320",
         "boardName": "Design",
         "description": "Mockups for packaging and physical product presentation.",
         "createdAt": "2024-12-05T18:00:00Z"
@@ -42,7 +42,7 @@
     {
         "id": "6",
         "title": "Customer Testimonials",
-        "thumbnail": "https://picsum.photos/seed/testimonials/600/400",
+        "thumbnail": "https://picsum.photos/seed/testimonials/480/320",
         "boardName": "Customer Success",
         "description": "Clips and quotes from real customers using our product.",
         "createdAt": "2024-12-06T20:00:00Z"
@@ -50,7 +50,7 @@
     {
         "id": "7",
         "title": "Press Kit Assets",
-        "thumbnail": "https://picsum.photos/seed/presskit/600/400",
+        "thumbnail": "https://picsum.photos/seed/presskit/480/320",
         "boardName": "Marketing",
         "description": "Images and messaging used in recent press releases.",
         "createdAt": "2024-12-07T09:00:00Z"
@@ -58,7 +58,7 @@
     {
         "id": "8",
         "title": "UI Exploration",
-        "thumbnail": "https://picsum.photos/seed/uiexploration/600/400",
+        "thumbnail": "https://picsum.photos/seed/uiexploration/480/320",
         "boardName": "Product Design",
         "description": "Concepts for future interface enhancements.",
         "createdAt": "2024-12-08T11:00:00Z"
@@ -66,7 +66,7 @@
     {
         "id": "9",
         "title": "Social Media Templates",
-        "thumbnail": "https://picsum.photos/seed/socialposts/600/400",
+        "thumbnail": "https://picsum.photos/seed/socialposts/480/320",
         "boardName": "Social",
         "description": "Prebuilt Figma or Canva templates for social sharing.",
         "createdAt": "2024-12-09T13:00:00Z"
@@ -74,7 +74,7 @@
     {
         "id": "10",
         "title": "Campaign Slides",
-        "thumbnail": "https://picsum.photos/seed/adcampaign/600/400",
+        "thumbnail": "https://picsum.photos/seed/adcampaign/480/320",
         "boardName": "Growth",
         "description": "Visual assets from the latest paid campaign deck.",
         "createdAt": "2024-12-10T15:00:00Z"
@@ -82,7 +82,7 @@
     {
         "id": "11",
         "title": "Instagram Stories",
-        "thumbnail": "https://picsum.photos/seed/instagram-stories/600/400",
+        "thumbnail": "https://picsum.photos/seed/instagram-stories/480/320",
         "boardName": "Creative Team 1",
         "description": "Mobile optimized image and video reels",
         "createdAt": "2024-12-12T00:00:00Z"
@@ -90,7 +90,7 @@
     {
         "id": "12",
         "title": "Press Kit PDF",
-        "thumbnail": "https://picsum.photos/seed/press-kit-pdf/600/400",
+        "thumbnail": "https://picsum.photos/seed/press-kit-pdf/480/320",
         "boardName": "Creative Team 2",
         "description": "One-pager and full press release bundle",
         "createdAt": "2024-12-13T00:00:00Z"
@@ -98,7 +98,7 @@
     {
         "id": "13",
         "title": "Email Design Concepts",
-        "thumbnail": "https://picsum.photos/seed/email-design-concepts/600/400",
+        "thumbnail": "https://picsum.photos/seed/email-design-concepts/480/320",
         "boardName": "Creative Team 3",
         "description": "Mockups for campaign automation",
         "createdAt": "2024-12-14T00:00:00Z"
@@ -106,7 +106,7 @@
     {
         "id": "14",
         "title": "UI Mockups",
-        "thumbnail": "https://picsum.photos/seed/ui-mockups/600/400",
+        "thumbnail": "https://picsum.photos/seed/ui-mockups/480/320",
         "boardName": "Creative Team 4",
         "description": "Screens and flows from design team",
         "createdAt": "2024-12-15T00:00:00Z"
@@ -114,7 +114,7 @@
     {
         "id": "15",
         "title": "UX Flowchart",
-        "thumbnail": "https://picsum.photos/seed/ux-flowchart/600/400",
+        "thumbnail": "https://picsum.photos/seed/ux-flowchart/480/320",
         "boardName": "Creative Team 5",
         "description": "Clickable user journey diagrams",
         "createdAt": "2024-12-16T00:00:00Z"
@@ -122,7 +122,7 @@
     {
         "id": "16",
         "title": "Packaging Shots",
-        "thumbnail": "https://picsum.photos/seed/packaging-shots/600/400",
+        "thumbnail": "https://picsum.photos/seed/packaging-shots/480/320",
         "boardName": "Creative Team 1",
         "description": "Flatlays of boxes and labels",
         "createdAt": "2024-12-17T00:00:00Z"
@@ -130,7 +130,7 @@
     {
         "id": "17",
         "title": "Internal Roadmap",
-        "thumbnail": "https://picsum.photos/seed/internal-roadmap/600/400",
+        "thumbnail": "https://picsum.photos/seed/internal-roadmap/480/320",
         "boardName": "Creative Team 2",
         "description": "Strategic planning slides",
         "createdAt": "2024-12-18T00:00:00Z"
@@ -138,7 +138,7 @@
     {
         "id": "18",
         "title": "Annual Report Draft",
-        "thumbnail": "https://picsum.photos/seed/annual-report-draft/600/400",
+        "thumbnail": "https://picsum.photos/seed/annual-report-draft/480/320",
         "boardName": "Creative Team 3",
         "description": "Q4 visuals and formatting examples",
         "createdAt": "2024-12-19T00:00:00Z"
@@ -146,7 +146,7 @@
     {
         "id": "19",
         "title": "Brand Refresh Concepts",
-        "thumbnail": "https://picsum.photos/seed/brand-refresh-concepts/600/400",
+        "thumbnail": "https://picsum.photos/seed/brand-refresh-concepts/480/320",
         "boardName": "Creative Team 4",
         "description": "Exploratory looks for future updates",
         "createdAt": "2024-12-20T00:00:00Z"
@@ -154,7 +154,7 @@
     {
         "id": "20",
         "title": "YouTube Thumbnail Set",
-        "thumbnail": "https://picsum.photos/seed/youtube-thumbnail-set/600/400",
+        "thumbnail": "https://picsum.photos/seed/youtube-thumbnail-set/480/320",
         "boardName": "Creative Team 5",
         "description": "Static preview images for channel",
         "createdAt": "2024-12-21T00:00:00Z"
@@ -162,7 +162,7 @@
     {
         "id": "21",
         "title": "Launch Event Photos",
-        "thumbnail": "https://picsum.photos/seed/launch-event-photos/600/400",
+        "thumbnail": "https://picsum.photos/seed/launch-event-photos/480/320",
         "boardName": "Creative Team 1",
         "description": "Recap images from IRL demo day",
         "createdAt": "2024-12-22T00:00:00Z"
@@ -170,7 +170,7 @@
     {
         "id": "22",
         "title": "Webinar Slide Deck",
-        "thumbnail": "https://picsum.photos/seed/webinar-slide-deck/600/400",
+        "thumbnail": "https://picsum.photos/seed/webinar-slide-deck/480/320",
         "boardName": "Creative Team 2",
         "description": "Visual support for recorded content",
         "createdAt": "2024-12-23T00:00:00Z"
@@ -178,7 +178,7 @@
     {
         "id": "23",
         "title": "Customer Support Snippets",
-        "thumbnail": "https://picsum.photos/seed/customer-support-snippets/600/400",
+        "thumbnail": "https://picsum.photos/seed/customer-support-snippets/480/320",
         "boardName": "Creative Team 3",
         "description": "Annotated gifs of help workflows",
         "createdAt": "2024-12-24T00:00:00Z"
@@ -186,7 +186,7 @@
     {
         "id": "24",
         "title": "Notion Branding",
-        "thumbnail": "https://picsum.photos/seed/notion-branding/600/400",
+        "thumbnail": "https://picsum.photos/seed/notion-branding/480/320",
         "boardName": "Creative Team 4",
         "description": "Assets for external documentation pages",
         "createdAt": "2024-12-25T00:00:00Z"
@@ -194,7 +194,7 @@
     {
         "id": "25",
         "title": "Board Strategy PDF",
-        "thumbnail": "https://picsum.photos/seed/board-strategy-pdf/600/400",
+        "thumbnail": "https://picsum.photos/seed/board-strategy-pdf/480/320",
         "boardName": "Creative Team 5",
         "description": "Leadership presentation slides",
         "createdAt": "2024-12-26T00:00:00Z"
