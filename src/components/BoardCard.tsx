@@ -1,5 +1,17 @@
 import { ImageWithPlaceholder } from "./ImageWithPlaceholder";
 
+/**
+ * BoardCard
+ * 
+ * A styled card component for displaying a creative asset or board item.
+ * Renders an optimized image with title and board name.
+ * 
+ * Props:
+ * @param title - the title of the asset or board
+ * @param thumbnail - the image URL (can be external)
+ * @param boardName - the board or category this item belongs to
+ */
+
 export interface IBoardCardProps {
     title: string;
     thumbnail: string;
