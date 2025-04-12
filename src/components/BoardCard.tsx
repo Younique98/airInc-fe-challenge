@@ -9,32 +9,30 @@ import { ImageWithPlaceholder } from "./ImageWithPlaceholder";
  * Props:
  * @param title - the title of the asset or board
  * @param thumbnail - the image URL (can be external)
- * @param boardName - the board or category this item belongs to
  */
 
 export interface IBoardCardProps {
     title: string;
-    thumbnail: string;
-    boardName: string;
+    thumbnail?: string;
     priority?: boolean;
     loading?: "lazy" | "eager";
 }
 
-export const BoardCard = ( { title, thumbnail, boardName, priority, loading }: IBoardCardProps ) => {
+export const BoardCard = ( { title, thumbnail, priority, loading }: IBoardCardProps ) => {
+    const thumbnailUrl = thumbnail ?? 'https://picsum.photos/seed/team-intros/480/320'
     return (
-        <div className="rounded-lg shadow-sm border bg-white hover:shadow-md transition duration-200 ease-in-out">
-            <div className="relative aspect-[3/2] w-full overflow-hidden rounded-t-lg">
-                <ImageWithPlaceholder
-                    src={thumbnail}
-                    alt={title}
-                    className="rounded-t-lg"
-                    priority={priority}
-                    loading={loading}
-                />
-            </div>
-            <div className="p-3">
-                <h3 className="text-sm font-semibold truncate">{title}</h3>
-                <p className="text-xs text-gray-500">{boardName}</p>
+        <div className="relative rounded-lg overflow-hidden shadow bg-white hover:shadow-md hover:scale-[1.02] transition-transform duration-200 border border-gray-200 aspect-square">
+            <ImageWithPlaceholder
+                src={thumbnailUrl}
+                alt={title}
+                className="object-cover w-full h-full"
+                priority={priority}
+                loading={loading}
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+            />
+
+            <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/60 to-transparent px-3 py-2">
+                <p className="text-sm font-medium text-white truncate">{title}</p>
             </div>
         </div>
     );

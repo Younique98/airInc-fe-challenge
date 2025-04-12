@@ -33,12 +33,12 @@ interface IImageWithPlaceholderProps {
 export const ImageWithPlaceholder = ( {
     src,
     alt,
-    width = 600,
-    height = 400,
+    width = 400,
+    height = 300,
     className = "",
     priority = false,
-    loading = "lazy",
-    sizes = "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+    loading = "eager",
+    sizes = "(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
 }: IImageWithPlaceholderProps ) => {
     return (
         <Image
