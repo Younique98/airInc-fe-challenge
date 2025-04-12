@@ -78,5 +78,125 @@
         "boardName": "Growth",
         "description": "Visual assets from the latest paid campaign deck.",
         "createdAt": "2024-12-10T15:00:00Z"
+    },
+    {
+        "id": "11",
+        "title": "Instagram Stories",
+        "thumbnail": "https://picsum.photos/seed/instagram-stories/600/400",
+        "boardName": "Creative Team 1",
+        "description": "Mobile optimized image and video reels",
+        "createdAt": "2024-12-12T00:00:00Z"
+    },
+    {
+        "id": "12",
+        "title": "Press Kit PDF",
+        "thumbnail": "https://picsum.photos/seed/press-kit-pdf/600/400",
+        "boardName": "Creative Team 2",
+        "description": "One-pager and full press release bundle",
+        "createdAt": "2024-12-13T00:00:00Z"
+    },
+    {
+        "id": "13",
+        "title": "Email Design Concepts",
+        "thumbnail": "https://picsum.photos/seed/email-design-concepts/600/400",
+        "boardName": "Creative Team 3",
+        "description": "Mockups for campaign automation",
+        "createdAt": "2024-12-14T00:00:00Z"
+    },
+    {
+        "id": "14",
+        "title": "UI Mockups",
+        "thumbnail": "https://picsum.photos/seed/ui-mockups/600/400",
+        "boardName": "Creative Team 4",
+        "description": "Screens and flows from design team",
+        "createdAt": "2024-12-15T00:00:00Z"
+    },
+    {
+        "id": "15",
+        "title": "UX Flowchart",
+        "thumbnail": "https://picsum.photos/seed/ux-flowchart/600/400",
+        "boardName": "Creative Team 5",
+        "description": "Clickable user journey diagrams",
+        "createdAt": "2024-12-16T00:00:00Z"
+    },
+    {
+        "id": "16",
+        "title": "Packaging Shots",
+        "thumbnail": "https://picsum.photos/seed/packaging-shots/600/400",
+        "boardName": "Creative Team 1",
+        "description": "Flatlays of boxes and labels",
+        "createdAt": "2024-12-17T00:00:00Z"
+    },
+    {
+        "id": "17",
+        "title": "Internal Roadmap",
+        "thumbnail": "https://picsum.photos/seed/internal-roadmap/600/400",
+        "boardName": "Creative Team 2",
+        "description": "Strategic planning slides",
+        "createdAt": "2024-12-18T00:00:00Z"
+    },
+    {
+        "id": "18",
+        "title": "Annual Report Draft",
+        "thumbnail": "https://picsum.photos/seed/annual-report-draft/600/400",
+        "boardName": "Creative Team 3",
+        "description": "Q4 visuals and formatting examples",
+        "createdAt": "2024-12-19T00:00:00Z"
+    },
+    {
+        "id": "19",
+        "title": "Brand Refresh Concepts",
+        "thumbnail": "https://picsum.photos/seed/brand-refresh-concepts/600/400",
+        "boardName": "Creative Team 4",
+        "description": "Exploratory looks for future updates",
+        "createdAt": "2024-12-20T00:00:00Z"
+    },
+    {
+        "id": "20",
+        "title": "YouTube Thumbnail Set",
+        "thumbnail": "https://picsum.photos/seed/youtube-thumbnail-set/600/400",
+        "boardName": "Creative Team 5",
+        "description": "Static preview images for channel",
+        "createdAt": "2024-12-21T00:00:00Z"
+    },
+    {
+        "id": "21",
+        "title": "Launch Event Photos",
+        "thumbnail": "https://picsum.photos/seed/launch-event-photos/600/400",
+        "boardName": "Creative Team 1",
+        "description": "Recap images from IRL demo day",
+        "createdAt": "2024-12-22T00:00:00Z"
+    },
+    {
+        "id": "22",
+        "title": "Webinar Slide Deck",
+        "thumbnail": "https://picsum.photos/seed/webinar-slide-deck/600/400",
+        "boardName": "Creative Team 2",
+        "description": "Visual support for recorded content",
+        "createdAt": "2024-12-23T00:00:00Z"
+    },
+    {
+        "id": "23",
+        "title": "Customer Support Snippets",
+        "thumbnail": "https://picsum.photos/seed/customer-support-snippets/600/400",
+        "boardName": "Creative Team 3",
+        "description": "Annotated gifs of help workflows",
+        "createdAt": "2024-12-24T00:00:00Z"
+    },
+    {
+        "id": "24",
+        "title": "Notion Branding",
+        "thumbnail": "https://picsum.photos/seed/notion-branding/600/400",
+        "boardName": "Creative Team 4",
+        "description": "Assets for external documentation pages",
+        "createdAt": "2024-12-25T00:00:00Z"
+    },
+    {
+        "id": "25",
+        "title": "Board Strategy PDF",
+        "thumbnail": "https://picsum.photos/seed/board-strategy-pdf/600/400",
+        "boardName": "Creative Team 5",
+        "description": "Leadership presentation slides",
+        "createdAt": "2024-12-26T00:00:00Z"
     }
 ]
