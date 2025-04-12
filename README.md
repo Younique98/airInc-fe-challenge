@@ -117,3 +117,13 @@ _Add if time allows before final submission_
 ## **Documentation**
 
 All technical decisions and tradeoffs are documented in the [PR template](.github/PULL_REQUEST_TEMPLATE.md), GitHub Issues, and the [FUTURE_CONSIDERATIONS.md](./FUTURE_CONSIDERATIONS.md).
+
+
+## Performance
+
+Lighthouse scores (as of local dev):
+
+- **Mobile:** 91
+- **Desktop:** 91
+
+Performance audits and fixes are documented in [PERFORMANCE_NOTES.md](docs/PERFORMANCE_NOTES.md).

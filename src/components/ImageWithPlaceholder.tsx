@@ -36,7 +36,7 @@ export const ImageWithPlaceholder = ( {
     height = 400,
     className = "",
     priority = false,
-    sizes = "(min-width: 1024px) 25vw, 50vw"
+    sizes = "(max-width: 768px) 100vw, (min-width: 1024px) 33vw, 50vw"
 }: IImageWithPlaceholderProps ) => {
     return (
         <Image

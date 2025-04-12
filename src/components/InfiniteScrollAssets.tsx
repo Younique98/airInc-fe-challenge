@@ -12,6 +12,10 @@ export const InfiniteScrollAssets = () => {
     const loadMoreRef = useRef<HTMLDivElement | null>( null );
 
     useEffect( () => {
+        const loadMoreEl = loadMoreRef.current;
+
+        if ( !loadMoreEl ) return;
+
         const observer = new IntersectionObserver(
             ( entries ) => {
                 if ( entries[ 0 ].isIntersecting ) {
@@ -21,16 +25,13 @@ export const InfiniteScrollAssets = () => {
             { threshold: 1 }
         );
 
-        if ( loadMoreRef.current ) {
-            observer.observe( loadMoreRef.current );
-        }
+        observer.observe( loadMoreEl );
 
         return () => {
-            if ( loadMoreRef.current ) {
-                observer.unobserve( loadMoreRef.current );
-            }
+            observer.unobserve( loadMoreEl );
         };
     }, [] );
+
 
     useEffect( () => {
         const nextItems = mockAssets.slice( 0, ( page + 1 ) * PAGE_SIZE );
@@ -39,12 +40,13 @@ export const InfiniteScrollAssets = () => {
 
     return (
         <section className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
-            {visibleAssets.map( ( asset ) => (
+            {visibleAssets.map( ( asset, i ) => (
                 <BoardCard
                     key={asset.id}
                     title={asset.title}
                     thumbnail={asset.thumbnail}
                     boardName={asset.boardName}
+                    priority={i === 0}
                 />
             ) )}
             <div ref={loadMoreRef} className="col-span-full h-10" />
