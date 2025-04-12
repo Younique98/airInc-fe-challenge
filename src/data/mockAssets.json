@@ -1,0 +1,82 @@
+[
+    {
+        "id": "1",
+        "title": "Brand Guidelines",
+        "thumbnail": "https://picsum.photos/seed/brand-guidelines/600/400",
+        "boardName": "Marketing",
+        "description": "Assets related to branding, tone, and design standards.",
+        "createdAt": "2024-12-01T10:00:00Z"
+    },
+    {
+        "id": "2",
+        "title": "Team Introductions",
+        "thumbnail": "https://picsum.photos/seed/team-intros/600/400",
+        "boardName": "People Ops",
+        "description": "Meet our internal team with headshots and short bios.",
+        "createdAt": "2024-12-02T12:00:00Z"
+    },
+    {
+        "id": "3",
+        "title": "Product Concepts",
+        "thumbnail": "https://picsum.photos/seed/product-preview/600/400",
+        "boardName": "Product",
+        "description": "Early previews of product features and user flows.",
+        "createdAt": "2024-12-03T14:00:00Z"
+    },
+    {
+        "id": "4",
+        "title": "Event Footage",
+        "thumbnail": "https://picsum.photos/seed/fall-gala/600/400",
+        "boardName": "Events",
+        "description": "Photos and clips from our latest in-person meetups.",
+        "createdAt": "2024-12-04T16:00:00Z"
+    },
+    {
+        "id": "5",
+        "title": "Packaging Drafts",
+        "thumbnail": "https://picsum.photos/seed/packaging/600/400",
+        "boardName": "Design",
+        "description": "Mockups for packaging and physical product presentation.",
+        "createdAt": "2024-12-05T18:00:00Z"
+    },
+    {
+        "id": "6",
+        "title": "Customer Testimonials",
+        "thumbnail": "https://picsum.photos/seed/testimonials/600/400",
+        "boardName": "Customer Success",
+        "description": "Clips and quotes from real customers using our product.",
+        "createdAt": "2024-12-06T20:00:00Z"
+    },
+    {
+        "id": "7",
+        "title": "Press Kit Assets",
+        "thumbnail": "https://picsum.photos/seed/presskit/600/400",
+        "boardName": "Marketing",
+        "description": "Images and messaging used in recent press releases.",
+        "createdAt": "2024-12-07T09:00:00Z"
+    },
+    {
+        "id": "8",
+        "title": "UI Exploration",
+        "thumbnail": "https://picsum.photos/seed/uiexploration/600/400",
+        "boardName": "Product Design",
+        "description": "Concepts for future interface enhancements.",
+        "createdAt": "2024-12-08T11:00:00Z"
+    },
+    {
+        "id": "9",
+        "title": "Social Media Templates",
+        "thumbnail": "https://picsum.photos/seed/socialposts/600/400",
+        "boardName": "Social",
+        "description": "Prebuilt Figma or Canva templates for social sharing.",
+        "createdAt": "2024-12-09T13:00:00Z"
+    },
+    {
+        "id": "10",
+        "title": "Campaign Slides",
+        "thumbnail": "https://picsum.photos/seed/adcampaign/600/400",
+        "boardName": "Growth",
+        "description": "Visual assets from the latest paid campaign deck.",
+        "createdAt": "2024-12-10T15:00:00Z"
+    }
+]
