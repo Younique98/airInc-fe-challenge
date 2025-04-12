@@ -47,6 +47,7 @@ export const InfiniteScrollAssets = () => {
                     thumbnail={asset.thumbnail}
                     boardName={asset.boardName}
                     priority={i === 0}
+                    loading={i === 0 ? "eager" : "lazy"}
                 />
             ) )}
             <div ref={loadMoreRef} className="col-span-full h-10" />

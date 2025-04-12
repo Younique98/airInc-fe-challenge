@@ -17,9 +17,10 @@ export interface IBoardCardProps {
     thumbnail: string;
     boardName: string;
     priority?: boolean;
+    loading?: "lazy" | "eager";
 }
 
-export const BoardCard = ( { title, thumbnail, boardName, priority }: IBoardCardProps ) => {
+export const BoardCard = ( { title, thumbnail, boardName, priority, loading }: IBoardCardProps ) => {
     return (
         <div className="rounded-lg shadow-sm border bg-white hover:shadow-md transition duration-200 ease-in-out">
             <div className="relative aspect-[3/2] w-full overflow-hidden rounded-t-lg">
@@ -28,6 +29,7 @@ export const BoardCard = ( { title, thumbnail, boardName, priority }: IBoardCard
                     alt={title}
                     className="rounded-t-lg"
                     priority={priority}
+                    loading={loading}
                 />
             </div>
             <div className="p-3">

@@ -1,6 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-     images: {
+  reactStrictMode: true,
+  swcMinify: true,
+  productionBrowserSourceMaps: true,
+  images: {
     remotePatterns: [
       {
         protocol: "https",
@@ -8,7 +11,6 @@ const nextConfig = {
       },
     ],
     },
-    productionBrowserSourceMaps: true,
 }
 
 module.exports = nextConfig

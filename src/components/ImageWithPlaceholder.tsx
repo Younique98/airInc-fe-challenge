@@ -27,6 +27,7 @@ interface IImageWithPlaceholderProps {
     className?: string;
     priority?: boolean;
     sizes?: string;
+    loading?: "lazy" | "eager";
 }
 
 export const ImageWithPlaceholder = ( {
@@ -36,7 +37,8 @@ export const ImageWithPlaceholder = ( {
     height = 400,
     className = "",
     priority = false,
-    sizes = "(max-width: 768px) 100vw, (min-width: 1024px) 33vw, 50vw"
+    loading = "lazy",
+    sizes = "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
 }: IImageWithPlaceholderProps ) => {
     return (
         <Image
@@ -48,6 +50,7 @@ export const ImageWithPlaceholder = ( {
             placeholder="blur"
             blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMTAwJScgaGVpZ2h0PSc1MCUnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Zyc+PHJlY3Qgd2lkdGg9JzEwMCUnIGhlaWdodD0nNTAlJyBmaWxsPSIjZGRkZGRkIi8+PC9zdmc+"
             priority={priority}
+            loading={loading}
             sizes={sizes}
         />
     );
