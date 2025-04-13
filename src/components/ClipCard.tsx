@@ -23,31 +23,31 @@ export const ClipCard = ( { clip, isFirst = false }: IClipCardProps ) => {
             className="rounded overflow-hidden shadow bg-white hover:shadow-lg transition duration-200 ease-in-out cursor-pointer"
             onClick={clip.type === 'video' ? handleClick : undefined}
         >
-{clip.type === 'photo' && (
-  <div className="relative aspect-video w-full bg-gray-200">
-    {/* Low quality placeholder */}
-    <Image
-      src={`${clip.assets.image}?w=20&q=10`}
-      alt=""
-      fill
-      className="object-cover transition-opacity duration-500 ease-in-out"
-      priority={false}
-    />
-    
-    {/* Main image */}
-    <Image
-      src={clip.assets.image}
-      alt={displayName}
-      fill
-      className="object-cover opacity-0 transition-opacity duration-500 ease-in-out"
-      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-      onLoadingComplete={(img) => {
-        img.classList.remove('opacity-0');
-      }}
-      priority={true}
-    />
-  </div>
-)}
+            {clip.type === 'photo' && (
+                <div className="relative aspect-video w-full bg-gray-200">
+                    {/* Low quality placeholder */}
+                    <Image
+                        src={`${ clip.assets.image }?w=20&q=10`}
+                        alt=""
+                        fill
+                        className="object-cover transition-opacity duration-500 ease-in-out"
+                        priority={false}
+                    />
+
+                    {/* Main image */}
+                    <Image
+                        src={clip.assets.image}
+                        alt={displayName}
+                        fill
+                        className="object-cover opacity-0 transition-opacity duration-500 ease-in-out"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        onLoadingComplete={( img ) => {
+                            img.classList.remove( 'opacity-0' );
+                        }}
+                        priority={true}
+                    />
+                </div>
+            )}
 
             {clip.type === 'video' && (
                 <div className="relative aspect-video group overflow-hidden rounded-md">
