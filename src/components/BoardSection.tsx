@@ -19,7 +19,7 @@ export const BoardSection = () => {
     } = useInfiniteAssets()
 
     const loadMoreRef = useRef<HTMLDivElement | null>( null )
-const [boards, setBoards] = useState<Board[]>([])
+    const [ boards, setBoards ] = useState<Board[]>( [] )
     const [ boardsLoading, setBoardsLoading ] = useState( true )
 
     useEffect( () => {
@@ -76,7 +76,7 @@ const [boards, setBoards] = useState<Board[]>([])
                             <BoardCard
                                 key={board.id}
                                 title={board.title}
-                                thumbnail={board.thumbnails?.[0]}
+                                thumbnail={board.thumbnails?.[ 0 ]}
                             />
                         ) )}
                     </div>
