@@ -78,7 +78,7 @@ const shortId = "bDkBvnzpB";
 export const fetchAssets = ( {
   cursor,
 }: {
-  cursor: string | null;
+    cursor: string | null;
 } ): Promise<ClipsListResponse> =>
   fetch( `https://api.air.inc/shorturl/${ shortId }/clips/search`, {
     method: "post",
@@ -87,7 +87,7 @@ export const fetchAssets = ( {
       "content-type": "application/json",
     },
     body: JSON.stringify( {
-      limit: 12,
+      limit: 24,
       type: "all",
       withOpenDiscussionStatus: true,
       filters: {

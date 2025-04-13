@@ -17,7 +17,6 @@ export const BoardSection = () => {
         hasNextPage,
         isFetchingNextPage
     } = useInfiniteAssets()
-
     const loadMoreRef = useRef<HTMLDivElement | null>( null )
     const [ boards, setBoards ] = useState<Board[]>( [] )
     const [ boardsLoading, setBoardsLoading ] = useState( true )
@@ -59,7 +58,7 @@ export const BoardSection = () => {
     if ( isError ) return <p className="text-red-500">Error loading assets</p>
 
     const clips = data?.pages.flatMap( ( page ) => page.data.clips ) ?? []
-
+    const total = data?.pages[0].data.total
     return (
         <>
             <section className="mb-6">
@@ -82,11 +81,11 @@ export const BoardSection = () => {
                     </div>
                 )}
             </section>
-            <h2 className="text-sm font-semibold text-gray-700 mb-2">Assets ({clips.length})</h2>
+            <h2 className="text-sm font-semibold text-gray-700 mb-2">Assets ({total ?? clips.length})</h2>
 
             <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                {clips.map( ( clip, index ) => (
-                    <ClipCard key={clip.id} clip={clip} isFirst={index === 0} />
+                {clips.map( ( clip) => (
+                    <ClipCard key={clip.id} clip={clip} />
                 ) )}
             </section>
 

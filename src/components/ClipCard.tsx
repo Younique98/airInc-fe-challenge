@@ -5,13 +5,11 @@ import { useRef } from 'react'
 
 interface IClipCardProps {
     clip: Clip
-    isFirst?: boolean
 }
 
-export const ClipCard = ( { clip, isFirst = false }: IClipCardProps ) => {
+export const ClipCard = ( { clip }: IClipCardProps ) => {
     const displayName = clip.title ?? clip.importedName ?? ''
     const videoRef = useRef<HTMLVideoElement | null>( null )
-
     const handleClick = () => {
         if ( videoRef.current ) {
             videoRef.current.play()
