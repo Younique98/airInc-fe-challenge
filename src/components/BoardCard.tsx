@@ -21,7 +21,7 @@ export interface IBoardCardProps {
 export const BoardCard = ( { title, thumbnail, priority, loading }: IBoardCardProps ) => {
     const thumbnailUrl = thumbnail ?? 'https://picsum.photos/seed/team-intros/480/320'
     return (
-        <div className="relative rounded-lg overflow-hidden shadow bg-white hover:shadow-md hover:scale-[1.02] transition-transform duration-200 border border-gray-200 aspect-square">
+        <div className="relative rounded-lg overflow-hidden shadow bg-white hover:shadow-md  transition-transform duration-200 ease-in-out border border-gray-200 aspect-square hover:scale-105">
             <ImageWithPlaceholder
                 src={thumbnailUrl}
                 alt={title}

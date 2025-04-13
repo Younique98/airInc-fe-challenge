@@ -5,13 +5,11 @@ import { useRef } from 'react'
 
 interface IClipCardProps {
     clip: Clip
-    isFirst?: boolean
 }
 
-export const ClipCard = ( { clip, isFirst = false }: IClipCardProps ) => {
+export const ClipCard = ( { clip }: IClipCardProps ) => {
     const displayName = clip.title ?? clip.importedName ?? ''
     const videoRef = useRef<HTMLVideoElement | null>( null )
-
     const handleClick = () => {
         if ( videoRef.current ) {
             videoRef.current.play()
@@ -19,9 +17,7 @@ export const ClipCard = ( { clip, isFirst = false }: IClipCardProps ) => {
     }
 
     return (
-        <div
-            className="rounded overflow-hidden shadow bg-white hover:shadow-lg transition duration-200 ease-in-out cursor-pointer"
-            onClick={clip.type === 'video' ? handleClick : undefined}
+<div className="rounded overflow-hidden shadow bg-white hover:shadow-lg transition-transform duration-200 ease-in-out hover:scale-105"            onClick={clip.type === 'video' ? handleClick : undefined}
         >
             {clip.type === 'photo' && (
                 <div className="relative aspect-video w-full bg-gray-200">
@@ -50,7 +46,7 @@ export const ClipCard = ( { clip, isFirst = false }: IClipCardProps ) => {
             )}
 
             {clip.type === 'video' && (
-                <div className="relative aspect-video group overflow-hidden rounded-md">
+                <div className="relative aspect-video group overflow-hidden rounded-md group-hover:brightness-90 group-hover:scale-105 transition">
                     <video
                         ref={videoRef}
                         src={clip.assets.previewVideo}
