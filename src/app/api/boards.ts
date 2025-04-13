@@ -26,13 +26,13 @@ const parentBoardId = "c74bbbc8-602b-4c88-be71-9e21b36b0514";
 const shortId = "bDkBvnzpB";
 
 export const fetchBoards = (): Promise<BoardsListResponse> =>
-  fetch(`https://api.air.inc/shorturl/${shortId}/boards/${parentBoardId}`, {
+  fetch( `https://api.air.inc/shorturl/${ shortId }/boards/${ parentBoardId }`, {
     method: "post",
     headers: {
       accept: "application/json",
       "content-type": "application/json",
     },
-    body: JSON.stringify({
+    body: JSON.stringify( {
       ancestorCutoff: parentBoardId,
       numThumbnails: 1,
       view: parentBoardId,
@@ -45,5 +45,5 @@ export const fetchBoards = (): Promise<BoardsListResponse> =>
         direction: "desc",
         name: "dateModified",
       },
-    }),
-  }).then((r) => r.json());
+    } ),
+  } ).then( ( r ) => r.json() );
