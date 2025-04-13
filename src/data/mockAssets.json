@@ -83,7 +83,7 @@
         "id": "11",
         "title": "Instagram Stories",
         "thumbnail": "https://picsum.photos/seed/instagram-stories/480/320",
-        "boardName": "Creative Team 1",
+        "boardName": "Product Team",
         "description": "Mobile optimized image and video reels",
         "createdAt": "2024-12-12T00:00:00Z"
     },
@@ -91,7 +91,7 @@
         "id": "12",
         "title": "Press Kit PDF",
         "thumbnail": "https://picsum.photos/seed/press-kit-pdf/480/320",
-        "boardName": "Creative Team 2",
+        "boardName": "Creative Ops",
         "description": "One-pager and full press release bundle",
         "createdAt": "2024-12-13T00:00:00Z"
     },
@@ -99,7 +99,7 @@
         "id": "13",
         "title": "Email Design Concepts",
         "thumbnail": "https://picsum.photos/seed/email-design-concepts/480/320",
-        "boardName": "Creative Team 3",
+        "boardName": "Lab Team",
         "description": "Mockups for campaign automation",
         "createdAt": "2024-12-14T00:00:00Z"
     },
@@ -123,7 +123,7 @@
         "id": "16",
         "title": "Packaging Shots",
         "thumbnail": "https://picsum.photos/seed/packaging-shots/480/320",
-        "boardName": "Creative Team 1",
+        "boardName": "Product Team",
         "description": "Flatlays of boxes and labels",
         "createdAt": "2024-12-17T00:00:00Z"
     },
@@ -131,7 +131,7 @@
         "id": "17",
         "title": "Internal Roadmap",
         "thumbnail": "https://picsum.photos/seed/internal-roadmap/480/320",
-        "boardName": "Creative Team 2",
+        "boardName": "Creative Ops",
         "description": "Strategic planning slides",
         "createdAt": "2024-12-18T00:00:00Z"
     },
@@ -139,7 +139,7 @@
         "id": "18",
         "title": "Annual Report Draft",
         "thumbnail": "https://picsum.photos/seed/annual-report-draft/480/320",
-        "boardName": "Creative Team 3",
+        "boardName": "Lab Team",
         "description": "Q4 visuals and formatting examples",
         "createdAt": "2024-12-19T00:00:00Z"
     },
@@ -163,7 +163,7 @@
         "id": "21",
         "title": "Launch Event Photos",
         "thumbnail": "https://picsum.photos/seed/launch-event-photos/480/320",
-        "boardName": "Creative Team 1",
+        "boardName": "Product Team",
         "description": "Recap images from IRL demo day",
         "createdAt": "2024-12-22T00:00:00Z"
     },
@@ -171,7 +171,7 @@
         "id": "22",
         "title": "Webinar Slide Deck",
         "thumbnail": "https://picsum.photos/seed/webinar-slide-deck/480/320",
-        "boardName": "Creative Team 2",
+        "boardName": "Creative Ops",
         "description": "Visual support for recorded content",
         "createdAt": "2024-12-23T00:00:00Z"
     },
@@ -179,7 +179,7 @@
         "id": "23",
         "title": "Customer Support Snippets",
         "thumbnail": "https://picsum.photos/seed/customer-support-snippets/480/320",
-        "boardName": "Creative Team 3",
+        "boardName": "Lab Team",
         "description": "Annotated gifs of help workflows",
         "createdAt": "2024-12-24T00:00:00Z"
     },

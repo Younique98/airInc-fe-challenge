@@ -4,17 +4,18 @@ export interface Clip {
   workspaceId: string;
   workspaceImage: string;
   workspaceName: string;
+  displayName: string;
   source: string;
   ext: string;
   type: "video" | "photo" | "livePhoto" | "animated" | "audio" | "nonMedia";
-  size: number; // Will be set by server but required for canUpload check
+  size: number;
   status:
-    | "created"
-    | "uploaded"
-    | "transcoding"
-    | "transcoded"
-    | "failed"
-    | "nonTranscodable";
+  | "created"
+  | "uploaded"
+  | "transcoding"
+  | "transcoded"
+  | "failed"
+  | "nonTranscodable";
   bookmarked: boolean;
   createdAt: string;
   recordedAt: string;
@@ -74,19 +75,19 @@ export interface ClipsListResponse {
 const boardId = "c74bbbc8-602b-4c88-be71-9e21b36b0514";
 const shortId = "bDkBvnzpB";
 
-export const fetchAssets = ({
+export const fetchAssets = ( {
   cursor,
 }: {
   cursor: string | null;
-}): Promise<ClipsListResponse> =>
-  fetch(`https://api.air.inc/shorturl/${shortId}/clips/search`, {
+} ): Promise<ClipsListResponse> =>
+  fetch( `https://api.air.inc/shorturl/${ shortId }/clips/search`, {
     method: "post",
     headers: {
       accept: "application/json",
       "content-type": "application/json",
     },
-    body: JSON.stringify({
-      limit: 24,
+    body: JSON.stringify( {
+      limit: 12,
       type: "all",
       withOpenDiscussionStatus: true,
       filters: {
@@ -101,5 +102,5 @@ export const fetchAssets = ({
       },
       descendantBoardId: boardId,
       cursor,
-    }),
-  }).then((r) => r.json());
+    } ),
+  } ).then( ( r ) => r.json() );

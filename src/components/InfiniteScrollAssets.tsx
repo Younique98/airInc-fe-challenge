@@ -10,6 +10,10 @@ export const InfiniteScrollAssets = () => {
     const [ visibleAssets, setVisibleAssets ] = useState( () => mockAssets.slice( 0, PAGE_SIZE ) );
     const [ page, setPage ] = useState( 1 );
     const loadMoreRef = useRef<HTMLDivElement | null>( null );
+    const [ filter, setFilter ] = useState<string | null>( null );
+    const filteredAssets = filter
+        ? visibleAssets.filter( ( asset ) => asset.title === filter )
+        : visibleAssets;
 
     useEffect( () => {
         const loadMoreEl = loadMoreRef.current;
@@ -39,18 +43,30 @@ export const InfiniteScrollAssets = () => {
     }, [ page ] );
 
     return (
-        <section className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
-            {visibleAssets.map( ( asset, i ) => (
-                <BoardCard
-                    key={asset.id}
-                    title={asset.title}
-                    thumbnail={asset.thumbnail}
-                    boardName={asset.boardName}
-                    priority={i === 0}
-                    loading={i === 0 ? "eager" : "lazy"}
-                />
-            ) )}
-            <div ref={loadMoreRef} className="col-span-full h-10" />
-        </section>
+        <>
+            <div className="flex gap-2 p-4">
+                {[ "All", "Marketing", "People Ops", "Product Design", "Product Team", "Lab Team" ].map( ( name ) => (
+                    <button
+                        key={name}
+                        onClick={() => setFilter( name === "All" ? null : name )}
+                        className={`cursor-pointer text-sm px-3 py-1 rounded ${ filter === name ? "bg-black text-white" : "bg-gray-100"
+                            }`}
+                    >
+                        {name}
+                    </button>
+                ) )}
+            </div>
+            <section className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
+                {filteredAssets.map( ( asset, index ) => (
+                    <BoardCard
+                        key={asset.id}
+                        title={asset.title}
+                        thumbnail={asset.thumbnail}
+                        priority={index < 3}
+                    />
+                ) )}
+                <div ref={loadMoreRef} className="col-span-full h-10" />
+            </section>
+        </>
     );
 }

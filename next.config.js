@@ -8,7 +8,15 @@ const nextConfig = {
       {
         protocol: "https",
         hostname: "picsum.photos",
-      },
+          },
+      {
+        protocol: "https",
+        hostname: "air-prod.imgix.net",
+          },
+      {
+        protocol: "https",
+        hostname: "air-original.imgix.net",
+          }
     ],
     },
 }
