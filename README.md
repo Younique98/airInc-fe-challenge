@@ -138,7 +138,7 @@ Dynamically sizing and lazy loading images
 ## **Future Considerations**
 
 For features and improvements not implemented due to time constraints, see:  
-[FUTURE_CONSIDERATIONS.md]()
+[FUTURE_CONSIDERATIONS.md](docs/FUTURE_CONSIDERATIONS.md)
 
 ### Areas Identified for Expansion
 Planned for tomorrow:
@@ -155,7 +155,7 @@ Planned for tomorrow:
 
 - Stretch: Drag-and-drop reordering and selection tooling
 
-Full details tracked in 📄 [FUTURE_CONSIDERATIONS.md](./FUTURE_CONSIDERATIONS.md)
+Full details tracked in 📄 [FUTURE_CONSIDERATIONS.md](docs/FUTURE_CONSIDERATIONS.md)
 
 ## **Contributing**
 
@@ -167,7 +167,7 @@ _Add if time allows before final submission_
 
 ## **Documentation**
 
-All technical decisions and tradeoffs are documented in the [PR template](.github/PULL_REQUEST_TEMPLATE.md), GitHub Issues, and the [FUTURE_CONSIDERATIONS.md](./FUTURE_CONSIDERATIONS.md).
+All technical decisions and tradeoffs are documented in the [PR template](.github/PULL_REQUEST_TEMPLATE.md), GitHub Issues, and the [FUTURE_CONSIDERATIONS.md](./docs/FUTURE_CONSIDERATIONS.md).
 
 ### Considerations
 Scoped third-party usage to essentials only
