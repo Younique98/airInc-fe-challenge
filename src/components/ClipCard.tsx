@@ -11,6 +11,7 @@ interface IClipCardProps {
     isFirst?: boolean
 }
 
+// TODO: (ET) clean up playback logic later and explore packages to manage video state across breakpoints
 const ClipCard = ({ clip, isFirst = false }: IClipCardProps) => {
     const displayName = clip.title ?? clip.importedName ?? ''
     const videoRef = useRef<HTMLVideoElement | null>(null)
@@ -114,7 +115,17 @@ const ClipCard = ({ clip, isFirst = false }: IClipCardProps) => {
             videoRef.current.pause()
         }
     }
-
+    const handleVideoClick = () => {
+        if (!videoRef.current || !isVisible) return
+        
+        if (videoRef.current.paused) {
+            videoRef.current.play().catch(() => {
+                console.warn('Video play prevented by browser')
+            })
+        } else {
+            videoRef.current.pause()
+        }
+    }
     return (
         <div className="rounded overflow-hidden shadow bg-white hover:shadow-lg transition-transform duration-200 ease-in-out hover:scale-105">
             {clip.type === 'photo' && (
@@ -144,6 +155,7 @@ const ClipCard = ({ clip, isFirst = false }: IClipCardProps) => {
                     className="relative aspect-video group overflow-hidden rounded-md group-hover:brightness-90 group-hover:scale-105 transition cursor-pointer"
                     onMouseEnter={handleMouseEnter}
                     onMouseLeave={handleMouseLeave}
+                    onClick={handleVideoClick}
                 >
                     <video
                         ref={videoRef}

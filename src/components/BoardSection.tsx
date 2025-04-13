@@ -27,7 +27,7 @@ export const BoardSection = () => {
                 const response = await fetchBoards()
                 setBoards( response.data ?? [] )
             } catch ( error ) {
-                console.error( 'Failed to fetch boards:', error )
+                console.error( 'Failed to fetch boards:', error ) //TODO: (ET): Add Error handling
             } finally {
                 setBoardsLoading( false )
             }
