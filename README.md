@@ -6,7 +6,7 @@ This project is a take-home challenge for Air, simulating a creative asset board
 
 ## **Live Demo**
 
-🌐 [https://air-inc-fe-challenge-h4okxbw9n.vercel.app/](https://air-inc-fe-challenge-h4okxbw9n.vercel.app/)
+🌐 [https://air-inc-fe-challenge.vercel.app/](https://air-inc-fe-challenge.vercel.app/)
 
 ## **Project Management**
 
@@ -138,7 +138,7 @@ Dynamically sizing and lazy loading images
 ## **Future Considerations**
 
 For features and improvements not implemented due to time constraints, see:  
-[FUTURE_CONSIDERATIONS.md](./FUTURE_CONSIDERATIONS.md)
+[FUTURE_CONSIDERATIONS.md]()
 
 ### Areas Identified for Expansion
 Planned for tomorrow:
@@ -192,4 +192,6 @@ Performance audits and fixes are documented in [PERFORMANCE_NOTES.md](docs/PERFO
 
 - Code: GitHub Repo
 
-🌐 [Deployment](https://air-inc-fe-challenge-h4okxbw9n.vercel.app/)
+🌐 [Deployment](https://air-inc-fe-challenge.vercel.app/)
+
+<img width="1576" alt="Screenshot 2025-04-13 at 12 07 44 AM" src="https://github.com/user-attachments/assets/b60dd880-a896-44eb-a05f-6bc122fe9535" />
