@@ -1,24 +1,18 @@
-import { useEffect, useState } from "react";
-import { fetchBoards, Board } from "@/app/api/boards";
+import { useQuery } from '@tanstack/react-query'
+import { fetchBoards, Board } from '@/app/api/boards'
 
 export const useBoards = () => {
-    const [ boards, setBoards ] = useState<Board[]>( [] );
-    const [ loading, setLoading ] = useState( true );
+    return useQuery<Board[], Error>({
+        queryKey: ['boards'],
+        queryFn: async () => {
+            const response = await fetchBoards()
 
-    useEffect( () => {
-        const loadBoards = async () => {
-            try {
-                const res = await fetchBoards();
-                setBoards( res.data );
-            } catch ( error ) {
-                console.error( "Error fetching boards", error );
-            } finally {
-                setLoading( false );
+            if (!response?.data || !Array.isArray(response.data)) {
+                throw new Error('Invalid boards response')
             }
-        };
-
-        loadBoards();
-    }, [] );
-
-    return { boards, loading };
-};
+            return response.data
+        },
+        staleTime: 5 * 60 * 1000,
+        refetchOnWindowFocus: false,
+    })
+}
