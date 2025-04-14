@@ -149,15 +149,15 @@ const ClipCard = ({ clip }: IClipCardProps) => {
                         
                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                         priority={false}
-                        loading={'lazy'}
-                        fetchPriority={'auto'}
+                        loading="lazy"
+                        fetchPriority="auto"
                         decoding="async"
                         onLoad={() => setIsImageLoaded(true)}
                     />
                 </div>
             )}
 
-            {clip.type === 'video' && (
+            {clip.type === "video" && (
                 <div
                     data-testid="clip-card-video-wrapper"
                     className="relative aspect-video group overflow-hidden rounded-md group-hover:brightness-90 group-hover:scale-105 transition cursor-pointer"
