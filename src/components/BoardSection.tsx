@@ -27,7 +27,7 @@ export const BoardSection = () => {
                 const response = await fetchBoards()
                 setBoards( response.data ?? [] )
             } catch ( error ) {
-                console.error( 'Failed to fetch boards:', error )
+                console.error( 'Failed to fetch boards:', error ) //TODO: (ET): Add Error handling
             } finally {
                 setBoardsLoading( false )
             }
@@ -58,7 +58,7 @@ export const BoardSection = () => {
     if ( isError ) return <p className="text-red-500">Error loading assets</p>
 
     const clips = data?.pages.flatMap( ( page ) => page.data.clips ) ?? []
-    const total = data?.pages[0].data.total
+    const total = data?.pages[ 0 ].data.total
     return (
         <>
             <section className="mb-6">
@@ -84,7 +84,7 @@ export const BoardSection = () => {
             <h2 className="text-sm font-semibold text-gray-700 mb-2">Assets ({total ?? clips.length})</h2>
 
             <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                {clips.map( ( clip) => (
+                {clips.map( ( clip ) => (
                     <ClipCard key={clip.id} clip={clip} />
                 ) )}
             </section>
