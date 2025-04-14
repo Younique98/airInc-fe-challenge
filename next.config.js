@@ -31,14 +31,7 @@ const nextConfig = {
                 ],
             },
             {
-                source: '/docs/:path*',
-                has: [
-                    {
-                        type: 'header',
-                        key: 'accept',
-                        value: 'application/pdf',
-                    },
-                ],
+                source: '/docs/:file*.pdf',
                 headers: [
                     {
                         key: 'Cache-Control',
