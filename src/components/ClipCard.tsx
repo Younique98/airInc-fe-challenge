@@ -19,9 +19,7 @@ const ClipCard = ({ clip, isFirst = false }: IClipCardProps) => {
     const [isVisible, setIsVisible] = useState(false)
     const [isImageLoaded, setIsImageLoaded] = useState(false)
     const animationRef = useRef<number | null>(null)
-    const supportsHover =
-        typeof window !== 'undefined' &&
-        window.matchMedia('(hover: hover)').matches
+const [supportsHover, setSupportsHover] = useState(false)
 
     const updateTimer = useCallback(() => {
         if (
@@ -36,6 +34,13 @@ const ClipCard = ({ clip, isFirst = false }: IClipCardProps) => {
         }
     }, [])
 
+
+useEffect(() => {
+  if (typeof window !== 'undefined') {
+    setSupportsHover(window.matchMedia('(hover: hover)').matches)
+  }
+}, [] )
+    
     useEffect(() => {
         if (!videoRef.current) return
 
@@ -152,6 +157,7 @@ const ClipCard = ({ clip, isFirst = false }: IClipCardProps) => {
 
             {clip.type === 'video' && (
                 <div
+                    data-testid="clip-card-video-wrapper" 
                     className="relative aspect-video group overflow-hidden rounded-md group-hover:brightness-90 group-hover:scale-105 transition cursor-pointer"
                     onMouseEnter={handleMouseEnter}
                     onMouseLeave={handleMouseLeave}
@@ -164,6 +170,7 @@ const ClipCard = ({ clip, isFirst = false }: IClipCardProps) => {
                         playsInline
                         preload="metadata"
                         controls={false}
+                        data-testid="clip-video"
                         className="aspect-video object-cover rounded-md transition group-hover:brightness-90 group-hover:scale-105 w-full"
                     >
                         <source
