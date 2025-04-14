@@ -130,7 +130,13 @@ const ClipCard = ({ clip }: IClipCardProps) => {
         }
     }
     const width = clip.width > 800 ? 800 : clip.width || 400
-    const height = clip.height && clip.width ? Math.round((clip.height / clip.width) * (clip.width > 800 ? 800 : clip.width)) : 300
+    const height =
+        clip.height && clip.width
+            ? Math.round(
+                  (clip.height / clip.width) *
+                      (clip.width > 800 ? 800 : clip.width)
+              )
+            : 300
     return (
         <div className="rounded overflow-hidden shadow bg-white hover:shadow-lg transition-transform duration-200 ease-in-out hover:scale-105">
             {clip.type === 'photo' && (
@@ -144,9 +150,8 @@ const ClipCard = ({ clip }: IClipCardProps) => {
                             'object-cover w-full h-full',
                             isImageLoaded
                                 ? 'opacity-100'
-                                  : 'opacity-0 transition-opacity duration-500 ease-in-out'
+                                : 'opacity-0 transition-opacity duration-500 ease-in-out'
                         )}
-                        
                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                         priority={false}
                         loading="lazy"
@@ -157,7 +162,7 @@ const ClipCard = ({ clip }: IClipCardProps) => {
                 </div>
             )}
 
-            {clip.type === "video" && (
+            {clip.type === 'video' && (
                 <div
                     data-testid="clip-card-video-wrapper"
                     className="relative aspect-video group overflow-hidden rounded-md group-hover:brightness-90 group-hover:scale-105 transition cursor-pointer"
@@ -172,6 +177,8 @@ const ClipCard = ({ clip }: IClipCardProps) => {
                         playsInline
                         preload="metadata"
                         controls={false}
+                        aria-hidden="true"
+                        tabIndex={-1}
                         data-testid="clip-video"
                         className="aspect-video object-cover rounded-md transition group-hover:brightness-90 group-hover:scale-105 w-full"
                     >
