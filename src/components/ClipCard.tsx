@@ -8,18 +8,17 @@ import { getOptimizedImageUrl } from '@/utils/getOptimizedImageUrl'
 
 interface IClipCardProps {
     clip: Clip
-    isFirst?: boolean
 }
 
 // TODO: (ET) clean up playback logic later and explore packages to manage video state across breakpoints
-const ClipCard = ({ clip, isFirst = false }: IClipCardProps) => {
+const ClipCard = ({ clip }: IClipCardProps) => {
     const displayName = clip.title ?? clip.importedName ?? ''
     const videoRef = useRef<HTMLVideoElement | null>(null)
     const [timeLeft, setTimeLeft] = useState<number | null>(null)
     const [isVisible, setIsVisible] = useState(false)
     const [isImageLoaded, setIsImageLoaded] = useState(false)
     const animationRef = useRef<number | null>(null)
-const [supportsHover, setSupportsHover] = useState(false)
+    const [supportsHover, setSupportsHover] = useState(false)
 
     const updateTimer = useCallback(() => {
         if (
@@ -34,13 +33,12 @@ const [supportsHover, setSupportsHover] = useState(false)
         }
     }, [])
 
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            setSupportsHover(window.matchMedia('(hover: hover)').matches)
+        }
+    }, [])
 
-useEffect(() => {
-  if (typeof window !== 'undefined') {
-    setSupportsHover(window.matchMedia('(hover: hover)').matches)
-  }
-}, [] )
-    
     useEffect(() => {
         if (!videoRef.current) return
 
@@ -122,7 +120,7 @@ useEffect(() => {
     }
     const handleVideoClick = () => {
         if (!videoRef.current || !isVisible) return
-        
+
         if (videoRef.current.paused) {
             videoRef.current.play().catch(() => {
                 console.warn('Video play prevented by browser')
@@ -131,33 +129,37 @@ useEffect(() => {
             videoRef.current.pause()
         }
     }
+    const width = clip.width > 800 ? 800 : clip.width || 400
+    const height = clip.height && clip.width ? Math.round((clip.height / clip.width) * (clip.width > 800 ? 800 : clip.width)) : 300
     return (
         <div className="rounded overflow-hidden shadow bg-white hover:shadow-lg transition-transform duration-200 ease-in-out hover:scale-105">
             {clip.type === 'photo' && (
                 <div className="relative aspect-video w-full bg-gray-200">
-                    {!isImageLoaded && isFirst && (
-                        <div className="absolute inset-0 bg-gray-200 animate-pulse" />
-                    )}
                     <Image
                         src={getOptimizedImageUrl(clip.assets.image)}
                         alt={displayName}
-                        fill
+                        width={width}
+                        height={height}
                         className={clsx(
-                            isImageLoaded ? 'opacity-100' : 'opacity-0',
-                            'object-cover opacity-0 transition-opacity duration-500 ease-in-out'
+                            'object-cover w-full h-full',
+                            isImageLoaded
+                                ? 'opacity-100'
+                                  : 'opacity-0 transition-opacity duration-500 ease-in-out'
                         )}
+                        
                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                        priority={isFirst}
-                        loading={isFirst ? 'eager' : 'lazy'}
-                        fetchPriority={isFirst ? 'high' : 'auto'}
+                        priority={false}
+                        loading="lazy"
+                        fetchPriority="auto"
+                        decoding="async"
                         onLoad={() => setIsImageLoaded(true)}
                     />
                 </div>
             )}
 
-            {clip.type === 'video' && (
+            {clip.type === "video" && (
                 <div
-                    data-testid="clip-card-video-wrapper" 
+                    data-testid="clip-card-video-wrapper"
                     className="relative aspect-video group overflow-hidden rounded-md group-hover:brightness-90 group-hover:scale-105 transition cursor-pointer"
                     onMouseEnter={handleMouseEnter}
                     onMouseLeave={handleMouseLeave}

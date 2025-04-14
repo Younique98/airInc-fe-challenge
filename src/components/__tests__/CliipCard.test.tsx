@@ -95,14 +95,14 @@ observe = jest.fn((target: Element) => {
     })
 
     it('Then it renders photo clip with image and title', () => {
-        render(<ClipCard clip={mockPhotoClip} isFirst={true} />)
+        render(<ClipCard clip={mockPhotoClip} />)
 
         const image = screen.getByAltText('Test Photo')
         expect(image).toBeInTheDocument()
     })
 
     it('Then it renders video clip with preview and duration', () => {
-        render(<ClipCard clip={mockVideoClip} isFirst={false} />)
+        render(<ClipCard clip={mockVideoClip} />)
 
         const video = screen.getByTestId('clip-video') as HTMLVideoElement
         expect(video).toBeInTheDocument()

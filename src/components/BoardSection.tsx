@@ -88,7 +88,7 @@ export const BoardSection = () => {
 
             <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 {clips.map((clip, index) => (
-                    <ClipCard key={clip.id} clip={clip} isFirst={index === 0} />
+                    <ClipCard key={clip.id} clip={clip} />
                 ))}
             </section>
 

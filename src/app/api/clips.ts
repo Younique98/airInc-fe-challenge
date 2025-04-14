@@ -44,9 +44,9 @@ export interface Clip {
   };
   mime?: string;
   altResolutions: {
-    ext: string; // 'MP4'
-    height: number; // 720
-    width: number; // 1280
+    ext: string;
+    height: number;
+    width: number;
     id: string;
   }[];
   hasOpenDiscussions?: boolean;

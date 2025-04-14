@@ -35,34 +35,6 @@ jest.mock('@/hooks/useInfiniteAssets', () => ({
         isFetchingNextPage: false,
     }),
 }))
-// Mock data
-const mockBoards = [
-  { id: '1', title: 'Board One', thumbnails: ['https://picsum.photos/200'] },
-  { id: '2', title: 'Board Two', thumbnails: ['https://picsum.photos/200'] },
-]
-
-const mockPaginatedClips = (start: number, count: number) => {
-  const data = Array.from({ length: count }, (_, i) => ({
-    id: `clip-${start + i}`,
-    title: `Clip ${start + i}`,
-    importedName: `Clip ${start + i}`,
-    type: 'photo',
-    assets: {
-      image: 'https://picsum.photos/400/300',
-    },
-  }))
-
-  return {
-    data: {
-      clips: data,
-      total: start + count,
-    },
-    pagination: {
-      hasMore: start + count < 20,
-      cursor: start + count < 20 ? `${start + count}` : null,
-    },
-  }
-}
 
 jest.mock('@/app/api/boards', () => ({
     fetchBoards: () =>
