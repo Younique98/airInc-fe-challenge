@@ -5,7 +5,8 @@ import Image from 'next/image'
 import { useEffect, useRef, useState, memo, useCallback } from 'react'
 import { clsx } from 'clsx'
 import { getOptimizedImageUrl } from '@/utils/getOptimizedImageUrl'
-
+import { DropdownMenu, handleCopyLink, handleDownload } from './DropdownMenu'
+import { AssetModal } from './AssetModal/AssetModal'
 interface IClipCardProps {
     clip: Clip
 }
@@ -19,6 +20,18 @@ const ClipCard = ({ clip }: IClipCardProps) => {
     const [isImageLoaded, setIsImageLoaded] = useState(false)
     const animationRef = useRef<number | null>(null)
     const [supportsHover, setSupportsHover] = useState(false)
+    const [isModalOpen, setIsModalOpen] = useState(false)
+    const [selectedClip, setSelectedClip] = useState<Clip | null>(null)
+
+    const handleOpenAssetModal = (clip: Clip) => {
+        setSelectedClip(clip)
+        setIsModalOpen(true)
+    }
+
+    const handleCloseAssetModal = () => {
+        setIsModalOpen(false)
+        setSelectedClip(null)
+    }
 
     const updateTimer = useCallback(() => {
         if (
@@ -141,6 +154,13 @@ const ClipCard = ({ clip }: IClipCardProps) => {
         <div className="rounded overflow-hidden shadow bg-white hover:shadow-lg transition-transform duration-200 ease-in-out hover:scale-105">
             {clip.type === 'photo' && (
                 <div className="relative aspect-video w-full bg-gray-200">
+                    <div className="absolute top-2 right-2 z-10">
+                        <DropdownMenu
+                            onDownload={() => handleDownload(clip)}
+                            onCopyLink={() => handleCopyLink(clip)}
+                            onOpenModal={() => handleOpenAssetModal(clip)}
+                        />
+                    </div>
                     <Image
                         src={getOptimizedImageUrl(clip.assets.image)}
                         alt={displayName}
@@ -170,6 +190,13 @@ const ClipCard = ({ clip }: IClipCardProps) => {
                     onMouseLeave={handleMouseLeave}
                     onClick={handleVideoClick}
                 >
+                    <div className="absolute top-2 right-2 z-10">
+                        <DropdownMenu
+                            onDownload={() => handleDownload(clip)}
+                            onCopyLink={() => handleCopyLink(clip)}
+                            onOpenModal={() => handleOpenAssetModal(clip)}
+                        />
+                    </div>
                     <video
                         ref={videoRef}
                         poster={getOptimizedImageUrl(clip.assets.image)}
@@ -194,6 +221,9 @@ const ClipCard = ({ clip }: IClipCardProps) => {
                         </span>
                     )}
                 </div>
+            )}
+            {selectedClip && (
+                <AssetModal clip={clip} initialIsOpen={true} />
             )}
         </div>
     )
