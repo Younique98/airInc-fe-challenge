@@ -31,7 +31,7 @@ const nextConfig = {
                 ],
             },
             {
-                source: '/docs/:path*',
+                source: '/docs/:file*.pdf',
                 has: [
                     {
                         type: 'header',
