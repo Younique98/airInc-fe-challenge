@@ -30,6 +30,22 @@ const nextConfig = {
                     },
                 ],
             },
+            {
+                source: '/docs/:path*',
+                has: [
+                    {
+                        type: 'header',
+                        key: 'accept',
+                        value: 'application/pdf',
+                    },
+                ],
+                headers: [
+                    {
+                        key: 'Cache-Control',
+                        value: 'public, max-age=31536000, immutable',
+                    },
+                ],
+            },
         ]
     },
 }
