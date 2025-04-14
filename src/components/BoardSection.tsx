@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef } from 'react'
 import { useInfiniteAssets } from '@/hooks/useInfiniteAssets'
 import { ClipCard } from '@/components/ClipCard'
 import { BoardCard } from './BoardCard'
@@ -87,8 +87,8 @@ export const BoardSection = () => {
             </h2>
 
             <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                {clips.map((clip) => (
-                    <ClipCard key={clip.id} clip={clip} />
+                {clips.map((clip, index) => (
+                    <ClipCard key={clip.id} clip={clip} isFirst={index === 0} />
                 ))}
             </section>
 
