@@ -58,9 +58,9 @@ export const BoardSection = () => {
     return (
         <>
             <section className="mb-6">
-                <h2 className="text-sm font-semibold text-gray-700 mb-2">
+                <h1 className="text-sm font-semibold text-gray-700 mb-2">
                     Boards ({boards.length})
-                </h2>
+                </h1>
                 {boardsLoading ? (
                     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
                         {Array.from({ length: boards.length }).map((_, i) => (
