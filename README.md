@@ -4,6 +4,8 @@
 
 This project is a take-home challenge for Air, simulating a creative asset board system that focuses on performance, scalability, and frontend polish. It demonstrates the ability to optimize images, handle large datasets via infinite scroll, and structure clean, modular code under a four-hour deadline.
 
+[![CI Pipeline](https://github.com/Younique98/airInc-fe-challenge/actions/workflows/ci.yml/badge.svg)](https://github.com/Younique98/airInc-fe-challenge/actions/workflows/ci.yml)
+
 ## **Live Demo**
 
 🌐 [https://air-inc-fe-challenge.vercel.app/](https://air-inc-fe-challenge.vercel.app/)
@@ -112,9 +114,9 @@ Responsive grid layout that adjusts to viewport size
 Video support with poster previews and hover interaction planned
 
 ### Performance
-Lighthouse (Desktop): 95
+Lighthouse (Desktop): 100
 
-Lighthouse (Mobile): 75–91
+Lighthouse (Mobile): 95
 
 Largest Contentful Paint (LCP) improvements applied by:
 
