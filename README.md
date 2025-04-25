@@ -196,6 +196,12 @@ Performance audits and fixes are documented in [PERFORMANCE_NOTES.md](docs/PERFO
 
 🌐 [Deployment](https://air-inc-fe-challenge.vercel.app/)
 
+## Start - only thing provided api's and boilerplate
+<img width="1311" alt="Screenshot 2025-04-25 at 1 22 59 PM" src="https://github.com/user-attachments/assets/aa90ac5c-cabe-4b05-b3de-efdf6bc64b55" />
+
+
+## End Result
+
 <img width="1576" alt="Screenshot" src="https://github.com/user-attachments/assets/b60dd880-a896-44eb-a05f-6bc122fe9535" />
 
 
